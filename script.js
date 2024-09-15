@@ -12,6 +12,8 @@ const recipes = [
 const recipeSearch = document.getElementById('recipe-search');
 const recipeList = document.getElementById('recipe-list');
 const subscribeForm = document.getElementById('subscribe-form');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navMenu = document.querySelector('.nav-menu');
 
 // Function to display recipes
 function displayRecipes(recipesToShow) {
@@ -80,8 +82,6 @@ function stickyHeader() {
     }
 }
 
-window.addEventListener('scroll', stickyHeader);
-
 // Animation on scroll
 function reveal() {
     const reveals = document.querySelectorAll('.reveal');
@@ -97,7 +97,30 @@ function reveal() {
     }
 }
 
+// Hamburger menu functionality
+function toggleMenu() {
+    navMenu.classList.toggle('active');
+    hamburgerMenu.classList.toggle('active');
+}
+
+// Event Listeners
+window.addEventListener('scroll', stickyHeader);
 window.addEventListener('scroll', reveal);
+
+hamburgerMenu.addEventListener('click', toggleMenu);
+
+// Close menu when a nav item is clicked
+document.querySelectorAll('.nav-menu li a').forEach(item => {
+    item.addEventListener('click', toggleMenu);
+});
+
+// Handle window resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        navMenu.classList.remove('active');
+        hamburgerMenu.classList.remove('active');
+    }
+});
 
 // To use the reveal animation, add the 'reveal' class to elements you want to animate
 // For example: <div class="reveal">Content to animate</div>
