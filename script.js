@@ -1,11 +1,11 @@
 // Sample recipe data (replace with your actual recipes)
 const recipes = [
-    { name: "Grilled Chicken", ingredients: ["chicken", "herbs", "lemon"], instructions: "Grill chicken with herbs and lemon until fully cooked." },
-    { name: "Vegetable Stir Fry", ingredients: ["mixed vegetables", "soy sauce", "ginger"], instructions: "Stir-fry vegetables with soy sauce and ginger for 5-7 minutes." },
-    { name: "Pasta Carbonara", ingredients: ["pasta", "eggs", "bacon", "parmesan"], instructions: "Cook pasta, mix with eggs, bacon, and cheese, and serve." },
-    { name: "Caesar Salad", ingredients: ["romaine lettuce", "croutons", "parmesan", "caesar dressing"], instructions: "Toss lettuce with croutons, parmesan, and dressing." },
-    { name: "BBQ Ribs", ingredients: ["ribs", "BBQ sauce", "spices"], instructions: "Cook ribs with BBQ sauce and spices until tender." },
-    { name: "Margherita Pizza", ingredients: ["pizza dough", "tomatoes", "mozzarella", "basil"], instructions: "Bake pizza dough with tomatoes and mozzarella at 475°F for 10-12 minutes. Add basil before serving." }
+    { name: "Grilled Chicken", ingredients: ["chicken", "herbs", "lemon"], instructions: "Grill chicken with herbs and lemon until fully cooked.", image: "grilled-chicken.jpg" },
+    { name: "Vegetable Stir Fry", ingredients: ["mixed vegetables", "soy sauce", "ginger"], instructions: "Stir-fry vegetables with soy sauce and ginger for 5-7 minutes.", image: "vegetable-stir-fry.jpg" },
+    { name: "Pasta Carbonara", ingredients: ["pasta", "eggs", "bacon", "parmesan"], instructions: "Cook pasta, mix with eggs, bacon, and cheese, and serve.", image: "pasta-carbonara.jpg" },
+    { name: "Caesar Salad", ingredients: ["romaine lettuce", "croutons", "parmesan", "caesar dressing"], instructions: "Toss lettuce with croutons, parmesan, and dressing.", image: "caesar-salad.jpg" },
+    { name: "BBQ Ribs", ingredients: ["ribs", "BBQ sauce", "spices"], instructions: "Cook ribs with BBQ sauce and spices until tender.", image: "bbq-ribs.jpg" },
+    { name: "Margherita Pizza", ingredients: ["pizza dough", "tomatoes", "mozzarella", "basil"], instructions: "Bake pizza dough with tomatoes and mozzarella at 475°F for 10-12 minutes. Add basil before serving.", image: "bbq-ribs.jpg" }
 ];
 
 // DOM elements
@@ -22,6 +22,7 @@ function displayRecipes(recipesToShow) {
         const recipeElement = document.createElement('div');
         recipeElement.classList.add('recipe');
         recipeElement.innerHTML = `
+            <img src="${recipe.image}" alt="${recipe.name}" class="recipe-image">
             <h3>${recipe.name}</h3>
             <p><strong>Ingredients:</strong> ${recipe.ingredients.join(', ')}</p>
             <button class="btn btn-secondary view-recipe">View Recipe</button>
