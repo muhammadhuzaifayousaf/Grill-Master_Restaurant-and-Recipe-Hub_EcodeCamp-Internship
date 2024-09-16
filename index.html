@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chicken Grill - Restaurant & Recipes</title>
+    <title>Grill Master - Restaurant & Recipe Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <img src="logo.png" alt="Your Logo" class="logo">
+            <img src="images/logo.png" alt="Grill Master Logo" class="logo">
             <nav>
                 <div class="hamburger-menu">
                     <div class="bar"></div>
@@ -19,9 +19,9 @@
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#product">Product</a></li>
-                    <li><a href="#promo">Promo</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#product">Our Menu</a></li>
+                    <li><a href="#promo">Special Offers</a></li>
+                    <li><a href="#about">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -33,56 +33,61 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="hero">
             <div class="container">
-                <h1>Title Here</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                <h1>Welcome to Grill Master</h1>
+                <p>Your ultimate destination for mouthwatering grilled dishes and delightful recipes.</p>
                 <button class="btn btn-primary">ORDER NOW</button>
             </div>
         </section>
 
+        <!-- Best Seller Section -->
         <section id="best-seller">
             <div class="container">
-                <h2>Best Seller</h2>
+                <h2>Best Sellers</h2>
                 <div class="dishes">
                     <div class="dish">
-                        <img src="dish1.jpg" alt="Dish 1">
-                        <h3>Title Here</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <img src="images/dish-1.jpg" alt="Grilled Chicken">
+                        <h3>Grilled Chicken</h3>
+                        <p>Juicy grilled chicken served with fresh herbs and a lemon twist.</p>
                     </div>
                     <div class="dish">
-                        <img src="dish2.jpg" alt="Dish 2">
-                        <h3>Title Here</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <img src="images/dish-2.jpg" alt="BBQ Ribs">
+                        <h3>BBQ Ribs</h3>
+                        <p>Succulent ribs marinated in our signature BBQ sauce, grilled to perfection.</p>
                     </div>
                     <div class="dish">
-                        <img src="dish3.jpg" alt="Dish 3">
-                        <h3>Title Here</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <img src="images/dish-3.jpg" alt="Pasta Carbonara">
+                        <h3>Pasta Carbonara</h3>
+                        <p>Classic Italian pasta with eggs, crispy bacon, and creamy Parmesan sauce.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Special Section -->
         <section id="oriental-taste">
             <div class="container">
                 <div class="content">
-                    <h2>Oriental Taste</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                    <h2>Oriental Delights</h2>
+                    <p>Experience the authentic flavors of the East with our special oriental dishes, expertly crafted by our renowned chefs.</p>
                     <button class="btn btn-primary">ORDER NOW</button>
                 </div>
-                <img src="oriental-dish.jpg" alt="Oriental Dish">
+                <img src="images/oriental-dish.jpg" alt="Oriental Dish">
             </div>
         </section>
 
+        <!-- Recipe Catalog Section -->
         <section id="recipe-catalog">
             <div class="container">
-                <h2>Recipe Catalog</h2>
+                <h2>Explore Our Recipe Collection</h2>
                 <input type="text" id="recipe-search" placeholder="Search recipes...">
                 <div id="recipe-list"></div>
             </div>
         </section>
 
+        <!-- Statistics Section -->
         <section id="statistics">
             <div class="container">
                 <div class="stat">
@@ -91,23 +96,24 @@
                 </div>
                 <div class="stat">
                     <h3>100</h3>
-                    <p>CHEF</p>
+                    <p>CHEFS</p>
                 </div>
                 <div class="stat">
                     <h3>300</h3>
-                    <p>MENU</p>
+                    <p>MENU ITEMS</p>
                 </div>
                 <div class="stat">
                     <h3>30</h3>
-                    <p>COUNTRY</p>
+                    <p>COUNTRIES</p>
                 </div>
             </div>
         </section>
 
+        <!-- Subscription Section -->
         <section id="subscribe">
             <div class="container">
-                <h2>Subscribe</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                <h2>Join Our Newsletter</h2>
+                <p>Stay updated with our latest recipes, special offers, and promotions. Subscribe now!</p>
                 <form id="subscribe-form">
                     <input type="email" placeholder="Your email">
                     <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
@@ -120,8 +126,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Title Here</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at dignissim nunc, id maximus ex. Etiam nec dignissim elit, at dignissim enim.</p>
+                    <h3>About Grill Master</h3>
+                    <p>At Grill Master, we are passionate about delivering the finest grilled dishes and providing culinary enthusiasts with top-notch recipes. Our dedication to quality and taste is at the heart of everything we do.</p>
                     <div class="social-icons">
                         <a href="#" aria-label="Instagram">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -140,10 +146,10 @@
                 <div class="footer-section">
                     <h3>About</h3>
                     <ul>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Our History</a></li>
+                        <li><a href="#">Meet Our Team</a></li>
                         <li><a href="#">Brand Guidelines</a></li>
-                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                     </ul>
                 </div>
@@ -151,18 +157,18 @@
                     <h3>Services</h3>
                     <ul>
                         <li><a href="#">How to Order</a></li>
-                        <li><a href="#">Our Product</a></li>
-                        <li><a href="#">Order Status</a></li>
-                        <li><a href="#">Promo</a></li>
-                        <li><a href="#">Payment Method</a></li>
+                        <li><a href="#">Explore Our Menu</a></li>
+                        <li><a href="#">Check Order Status</a></li>
+                        <li><a href="#">Special Promotions</a></li>
+                        <li><a href="#">Payment Options</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Other</h3>
                     <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Get in Touch</a></li>
+                        <li><a href="#">Help & Support</a></li>
+                        <li><a href="#">FAQs</a></li>
                     </ul>
                 </div>
             </div>
