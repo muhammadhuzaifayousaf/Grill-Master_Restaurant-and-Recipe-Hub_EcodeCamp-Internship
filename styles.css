@@ -54,10 +54,16 @@ body {
 /* Header Styles */
 header {
     background-color: rgba(26, 26, 26, 0.9);
+    backdrop-filter: blur(0);
     position: sticky;
     top: 0;
     z-index: 1000;
     padding: 20px 10;
+    transition: backdrop-filter 0.3s ease;
+}
+
+header.sticky {
+    backdrop-filter: blur(8px);
 }
 
 header .container {
