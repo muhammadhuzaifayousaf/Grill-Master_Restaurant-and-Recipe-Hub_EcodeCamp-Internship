@@ -1,11 +1,11 @@
-// Sample recipe data (replace with your actual recipes)
+// Recipe data (You can add more ecipes)
 const recipes = [
-    { name: "Grilled Chicken", ingredients: ["chicken", "herbs", "lemon"], instructions: "Grill chicken with herbs and lemon until fully cooked.", image: "grilled-chicken.jpg" },
-    { name: "Vegetable Stir Fry", ingredients: ["mixed vegetables", "soy sauce", "ginger"], instructions: "Stir-fry vegetables with soy sauce and ginger for 5-7 minutes.", image: "vegetable-stir-fry.jpg" },
-    { name: "Pasta Carbonara", ingredients: ["pasta", "eggs", "bacon", "parmesan"], instructions: "Cook pasta, mix with eggs, bacon, and cheese, and serve.", image: "pasta-carbonara.jpg" },
-    { name: "Caesar Salad", ingredients: ["romaine lettuce", "croutons", "parmesan", "caesar dressing"], instructions: "Toss lettuce with croutons, parmesan, and dressing.", image: "caesar-salad.jpg" },
-    { name: "BBQ Ribs", ingredients: ["ribs", "BBQ sauce", "spices"], instructions: "Cook ribs with BBQ sauce and spices until tender.", image: "bbq-ribs.jpg" },
-    { name: "Margherita Pizza", ingredients: ["pizza dough", "tomatoes", "mozzarella", "basil"], instructions: "Bake pizza dough with tomatoes and mozzarella at 475°F for 10-12 minutes. Add basil before serving.", image: "bbq-ribs.jpg" }
+    { name: "Grilled Chicken", ingredients: ["chicken", "herbs", "lemon"], instructions: "Grill chicken with herbs and lemon until fully cooked.", image: "images/grilled-chicken.jpg" },
+    { name: "Vegetable Stir Fry", ingredients: ["mixed vegetables", "soy sauce", "ginger"], instructions: "Stir-fry vegetables with soy sauce and ginger for 5-7 minutes.", image: "images/vegetable-stir-fry.jpg" },
+    { name: "Pasta Carbonara", ingredients: ["pasta", "eggs", "bacon", "parmesan"], instructions: "Cook pasta, mix with eggs, bacon, and cheese, and serve.", image: "images/pasta-carbonara.jpg" },
+    { name: "Caesar Salad", ingredients: ["romaine lettuce", "croutons", "parmesan", "caesar dressing"], instructions: "Toss lettuce with croutons, parmesan, and dressing.", image: "images/caesar-salad.jpg" },
+    { name: "BBQ Ribs", ingredients: ["ribs", "BBQ sauce", "spices"], instructions: "Cook ribs with BBQ sauce and spices until tender.", image: "images/bbq-ribs.jpg" },
+    { name: "Margherita Pizza", ingredients: ["pizza dough", "tomatoes", "mozzarella", "basil"], instructions: "Bake pizza dough with tomatoes and mozzarella at 475°F for 10-12 minutes. Add basil before serving.", image: "images/margherita-pizza.jpg" }
 ];
 
 // DOM elements
@@ -104,6 +104,14 @@ function toggleMenu() {
     hamburgerMenu.classList.toggle('active');
 }
 
+// Close menu when clicking outside
+document.addEventListener('click', function (e) {
+    if (!navMenu.contains(e.target) && !hamburgerMenu.contains(e.target) && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        hamburgerMenu.classList.remove('active');
+    }
+});
+
 // Event Listeners
 window.addEventListener('scroll', stickyHeader);
 window.addEventListener('scroll', reveal);
@@ -122,6 +130,3 @@ window.addEventListener('resize', () => {
         hamburgerMenu.classList.remove('active');
     }
 });
-
-// To use the reveal animation, add the 'reveal' class to elements you want to animate
-// For example: <div class="reveal">Content to animate</div>
